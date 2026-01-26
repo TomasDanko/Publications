@@ -61,7 +61,7 @@ public class JwtAuthFilterTest {
             // Spusti filter
             jwtAuthenticationFilter.doFilterInternal(request, response, filterChain);
 
-            // Over, že sa zavolalo načítanie usera
+
             verify(userDetailService, times(1)).loadUserByUsername("testuser");
             verify(filterChain, times(1)).doFilter(request, response);
         }

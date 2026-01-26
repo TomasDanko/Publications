@@ -77,7 +77,6 @@ class RoleControllerTest {
 
     @Test
     void testDeleteRole_success() throws Exception {
-        // tu nepotrebujeme when(), lebo delete je void
         mockMvc.perform(delete("/api/role/roles/{userId}/{roleId}", 10L, 2L))
                 .andExpect(status().isOk());
 
